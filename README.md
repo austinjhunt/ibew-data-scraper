@@ -42,3 +42,25 @@ Make sure you have Python installed (>= 3.6) and install the required dependenci
 ```bash
 pip install -r requirements.txt
 ```
+
+### Script Arguments
+
+```bash
+
+(venv) austinhunt@Austins-MBP-2 unionfacts % python main.py -h
+usage: main.py [-h] --states STATES [--output OUTPUT]
+
+IBEW Data Scraper
+
+options:
+  -h, --help       show this help message and exit
+  --states STATES  Comma-separated list of state abbreviations to query, e.g. NY,CT,RI
+  --output OUTPUT  Output file name (must end with .xlsx)
+```
+
+### Example:
+
+```bash
+(venv) austinhunt@Austins-MBP-2 unionfacts % python main.py --states=NY,CT,RI,MA,VT,NH,ME --output merged_union_data.xlsx
+
+```
