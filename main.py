@@ -290,7 +290,7 @@ class IBEWDataScraper:
                         "Location": location,
                         "Members": members,
                         "LU": lu_id,
-                        "URL": href_value,
+                        "URL": f'https://unionfacts.com{href_value}',
                     }
                 return None
 
