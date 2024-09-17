@@ -1,0 +1,558 @@
+2024-09-17 19:44:29,660 - __main__ - INFO - {'action': 'UnionDataScraper.run'}
+2024-09-17 19:44:29,660 - __main__ - INFO - {'action': 'UnionDataScraper.get_ibew_locals_directory_from_union_facts_as_dataframe', 'url': 'https://unionfacts.com/locals/International_Brotherhood_of_Electrical_Workers'}
+2024-09-17 19:44:29,660 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://unionfacts.com/locals/International_Brotherhood_of_Electrical_Workers'}
+2024-09-17 19:44:30,247 - __main__ - INFO - {'status': 'success', 'url': 'https://unionfacts.com/locals/International_Brotherhood_of_Electrical_Workers'}
+2024-09-17 19:44:30,358 - __main__ - INFO - {'action': 'UnionDataScraper.query_union_directory_by_multiple_states', 'states': ['NY', 'CT', 'RI', 'MA', 'VT', 'NH', 'ME']}
+2024-09-17 19:44:30,358 - __main__ - INFO - {'action': 'UnionDataScraper.query_by_state', 'state': 'NY', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=NY&filter=all'}
+2024-09-17 19:44:30,358 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=NY&filter=all'}
+2024-09-17 19:44:30,523 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=NY&filter=all'}
+2024-09-17 19:44:30,524 - __main__ - INFO - {'action': 'UnionDataScraper.query_by_state', 'state': 'CT', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=CT&filter=all'}
+2024-09-17 19:44:30,524 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=CT&filter=all'}
+2024-09-17 19:44:30,687 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=CT&filter=all'}
+2024-09-17 19:44:30,690 - __main__ - INFO - {'action': 'UnionDataScraper.query_by_state', 'state': 'RI', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=RI&filter=all'}
+2024-09-17 19:44:30,690 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=RI&filter=all'}
+2024-09-17 19:44:30,877 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=RI&filter=all'}
+2024-09-17 19:44:30,877 - __main__ - INFO - {'action': 'UnionDataScraper.query_by_state', 'state': 'MA', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=MA&filter=all'}
+2024-09-17 19:44:30,877 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=MA&filter=all'}
+2024-09-17 19:44:31,021 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=MA&filter=all'}
+2024-09-17 19:44:31,021 - __main__ - INFO - {'action': 'UnionDataScraper.query_by_state', 'state': 'VT', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=VT&filter=all'}
+2024-09-17 19:44:31,021 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=VT&filter=all'}
+2024-09-17 19:44:31,170 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=VT&filter=all'}
+2024-09-17 19:44:31,170 - __main__ - INFO - {'action': 'UnionDataScraper.query_by_state', 'state': 'NH', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=NH&filter=all'}
+2024-09-17 19:44:31,170 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=NH&filter=all'}
+2024-09-17 19:44:31,312 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=NH&filter=all'}
+2024-09-17 19:44:31,313 - __main__ - INFO - {'action': 'UnionDataScraper.query_by_state', 'state': 'ME', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=ME&filter=all'}
+2024-09-17 19:44:31,313 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=ME&filter=all'}
+2024-09-17 19:44:31,477 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state=ME&filter=all'}
+2024-09-17 19:44:31,478 - __main__ - INFO - {'action': 'UnionDataScraper.add_classifications_to_unions_list', 'unions_count': 87}
+2024-09-17 19:44:31,478 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '3', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=3'}
+2024-09-17 19:44:31,478 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=3'}
+2024-09-17 19:44:31,478 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '10', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=10'}
+2024-09-17 19:44:31,478 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '25', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=25'}
+2024-09-17 19:44:31,479 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=10'}
+2024-09-17 19:44:31,479 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '34', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=34'}
+2024-09-17 19:44:31,479 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=25'}
+2024-09-17 19:44:31,480 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '39', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=39'}
+2024-09-17 19:44:31,481 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '41', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=41'}
+2024-09-17 19:44:31,481 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '69', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=69'}
+2024-09-17 19:44:31,481 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=34'}
+2024-09-17 19:44:31,481 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '75', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=75'}
+2024-09-17 19:44:31,483 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=39'}
+2024-09-17 19:44:31,483 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '83', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=83'}
+2024-09-17 19:44:31,483 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=41'}
+2024-09-17 19:44:31,483 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '103', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=103'}
+2024-09-17 19:44:31,484 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=69'}
+2024-09-17 19:44:31,484 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=75'}
+2024-09-17 19:44:31,485 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=83'}
+2024-09-17 19:44:31,486 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=103'}
+2024-09-17 19:44:31,617 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=10'}
+2024-09-17 19:44:31,617 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '10', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=10'}
+2024-09-17 19:44:31,617 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=10'}
+2024-09-17 19:44:31,620 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=39'}
+2024-09-17 19:44:31,620 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=69'}
+2024-09-17 19:44:31,620 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '39', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=39'}
+2024-09-17 19:44:31,621 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '69', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=69'}
+2024-09-17 19:44:31,621 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=39'}
+2024-09-17 19:44:31,621 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=69'}
+2024-09-17 19:44:31,624 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=25'}
+2024-09-17 19:44:31,624 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=83'}
+2024-09-17 19:44:31,624 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '25', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=25'}
+2024-09-17 19:44:31,624 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '83', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=83'}
+2024-09-17 19:44:31,624 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=25'}
+2024-09-17 19:44:31,624 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=83'}
+2024-09-17 19:44:31,626 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=75'}
+2024-09-17 19:44:31,626 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=3'}
+2024-09-17 19:44:31,627 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '75', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=75'}
+2024-09-17 19:44:31,627 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '3', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=3'}
+2024-09-17 19:44:31,627 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=75'}
+2024-09-17 19:44:31,627 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=3'}
+2024-09-17 19:44:31,628 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=41'}
+2024-09-17 19:44:31,628 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '41', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=41'}
+2024-09-17 19:44:31,629 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=41'}
+2024-09-17 19:44:31,629 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=103'}
+2024-09-17 19:44:31,631 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '103', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=103'}
+2024-09-17 19:44:31,631 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=103'}
+2024-09-17 19:44:31,632 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=34'}
+2024-09-17 19:44:31,634 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '34', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=34'}
+2024-09-17 19:44:31,635 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=34'}
+2024-09-17 19:44:31,771 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=69'}
+2024-09-17 19:44:31,771 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=10'}
+2024-09-17 19:44:31,772 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '147', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=147'}
+2024-09-17 19:44:31,772 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '148', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=148'}
+2024-09-17 19:44:31,772 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=147'}
+2024-09-17 19:44:31,772 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=148'}
+2024-09-17 19:44:31,786 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=39'}
+2024-09-17 19:44:31,786 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=83'}
+2024-09-17 19:44:31,786 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '151', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=151'}
+2024-09-17 19:44:31,786 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '196', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=196'}
+2024-09-17 19:44:31,786 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=151'}
+2024-09-17 19:44:31,786 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=196'}
+2024-09-17 19:44:31,816 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=25'}
+2024-09-17 19:44:31,817 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '198', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=198'}
+2024-09-17 19:44:31,817 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=198'}
+2024-09-17 19:44:31,818 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=75'}
+2024-09-17 19:44:31,818 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '219', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=219'}
+2024-09-17 19:44:31,818 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=219'}
+2024-09-17 19:44:31,828 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=41'}
+2024-09-17 19:44:31,828 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '290', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=290'}
+2024-09-17 19:44:31,828 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=290'}
+2024-09-17 19:44:31,830 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=103'}
+2024-09-17 19:44:31,830 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '330', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=330'}
+2024-09-17 19:44:31,830 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=330'}
+2024-09-17 19:44:31,835 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=34'}
+2024-09-17 19:44:31,835 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '441', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=441'}
+2024-09-17 19:44:31,835 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=441'}
+2024-09-17 19:44:31,838 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=3'}
+2024-09-17 19:44:31,838 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '446', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=446'}
+2024-09-17 19:44:31,838 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=446'}
+2024-09-17 19:44:31,901 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=147'}
+2024-09-17 19:44:31,901 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '147', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=147'}
+2024-09-17 19:44:31,901 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=147'}
+2024-09-17 19:44:31,920 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=196'}
+2024-09-17 19:44:31,920 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=151'}
+2024-09-17 19:44:31,920 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '196', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=196'}
+2024-09-17 19:44:31,920 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '151', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=151'}
+2024-09-17 19:44:31,921 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=196'}
+2024-09-17 19:44:31,921 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=151'}
+2024-09-17 19:44:31,923 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=148'}
+2024-09-17 19:44:31,923 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '148', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=148'}
+2024-09-17 19:44:31,923 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=148'}
+2024-09-17 19:44:31,944 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=219'}
+2024-09-17 19:44:31,944 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '219', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=219'}
+2024-09-17 19:44:31,944 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=219'}
+2024-09-17 19:44:31,950 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=330'}
+2024-09-17 19:44:31,950 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '330', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=330'}
+2024-09-17 19:44:31,950 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=330'}
+2024-09-17 19:44:31,952 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=198'}
+2024-09-17 19:44:31,952 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '198', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=198'}
+2024-09-17 19:44:31,952 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=198'}
+2024-09-17 19:44:31,953 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=290'}
+2024-09-17 19:44:31,953 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '290', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=290'}
+2024-09-17 19:44:31,953 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=290'}
+2024-09-17 19:44:31,975 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=441'}
+2024-09-17 19:44:31,975 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '441', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=441'}
+2024-09-17 19:44:31,975 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=441'}
+2024-09-17 19:44:31,979 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=446'}
+2024-09-17 19:44:31,979 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '446', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=446'}
+2024-09-17 19:44:31,979 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=446'}
+2024-09-17 19:44:32,061 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=147'}
+2024-09-17 19:44:32,062 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=148'}
+2024-09-17 19:44:32,062 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '469', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=469'}
+2024-09-17 19:44:32,062 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '517', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=517'}
+2024-09-17 19:44:32,062 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=469'}
+2024-09-17 19:44:32,062 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=517'}
+2024-09-17 19:44:32,063 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=151'}
+2024-09-17 19:44:32,063 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '545', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=545'}
+2024-09-17 19:44:32,064 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=545'}
+2024-09-17 19:44:32,088 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=196'}
+2024-09-17 19:44:32,089 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '557', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=557'}
+2024-09-17 19:44:32,089 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=557'}
+2024-09-17 19:44:32,105 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=290'}
+2024-09-17 19:44:32,105 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '564', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=564'}
+2024-09-17 19:44:32,105 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=564'}
+2024-09-17 19:44:32,117 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=330'}
+2024-09-17 19:44:32,118 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '597', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=597'}
+2024-09-17 19:44:32,118 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=597'}
+2024-09-17 19:44:32,129 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=198'}
+2024-09-17 19:44:32,129 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=219'}
+2024-09-17 19:44:32,129 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '634', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=634'}
+2024-09-17 19:44:32,130 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '698', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=698'}
+2024-09-17 19:44:32,130 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=634'}
+2024-09-17 19:44:32,130 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=698'}
+2024-09-17 19:44:32,165 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=441'}
+2024-09-17 19:44:32,165 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=446'}
+2024-09-17 19:44:32,166 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '716', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=716'}
+2024-09-17 19:44:32,166 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=716'}
+2024-09-17 19:44:32,166 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '750', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=750'}
+2024-09-17 19:44:32,166 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=750'}
+2024-09-17 19:44:32,197 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=545'}
+2024-09-17 19:44:32,197 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '545', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=545'}
+2024-09-17 19:44:32,197 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=545'}
+2024-09-17 19:44:32,200 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=517'}
+2024-09-17 19:44:32,200 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '517', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=517'}
+2024-09-17 19:44:32,200 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=517'}
+2024-09-17 19:44:32,230 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=557'}
+2024-09-17 19:44:32,231 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=564'}
+2024-09-17 19:44:32,231 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '557', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=557'}
+2024-09-17 19:44:32,231 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=557'}
+2024-09-17 19:44:32,231 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '564', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=564'}
+2024-09-17 19:44:32,231 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=564'}
+2024-09-17 19:44:32,256 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=634'}
+2024-09-17 19:44:32,257 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '634', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=634'}
+2024-09-17 19:44:32,257 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=634'}
+2024-09-17 19:44:32,258 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=597'}
+2024-09-17 19:44:32,258 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '597', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=597'}
+2024-09-17 19:44:32,258 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=597'}
+2024-09-17 19:44:32,267 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=698'}
+2024-09-17 19:44:32,267 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '698', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=698'}
+2024-09-17 19:44:32,268 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=698'}
+2024-09-17 19:44:32,295 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=716'}
+2024-09-17 19:44:32,295 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '716', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=716'}
+2024-09-17 19:44:32,295 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=716'}
+2024-09-17 19:44:32,297 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=750'}
+2024-09-17 19:44:32,297 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '750', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=750'}
+2024-09-17 19:44:32,297 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=750'}
+2024-09-17 19:44:32,365 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=545'}
+2024-09-17 19:44:32,366 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=517'}
+2024-09-17 19:44:32,366 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '774', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=774'}
+2024-09-17 19:44:32,366 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '780', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=780'}
+2024-09-17 19:44:32,366 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=774'}
+2024-09-17 19:44:32,366 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=780'}
+2024-09-17 19:44:32,379 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=564'}
+2024-09-17 19:44:32,379 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '789', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=789'}
+2024-09-17 19:44:32,379 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=789'}
+2024-09-17 19:44:32,394 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=634'}
+2024-09-17 19:44:32,395 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '798', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=798'}
+2024-09-17 19:44:32,395 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=798'}
+2024-09-17 19:44:32,399 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=557'}
+2024-09-17 19:44:32,400 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '800', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=800'}
+2024-09-17 19:44:32,400 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=800'}
+2024-09-17 19:44:32,405 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=698'}
+2024-09-17 19:44:32,406 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=597'}
+2024-09-17 19:44:32,406 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '806', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=806'}
+2024-09-17 19:44:32,406 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=806'}
+2024-09-17 19:44:32,407 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '845', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=845'}
+2024-09-17 19:44:32,407 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=845'}
+2024-09-17 19:44:32,460 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=750'}
+2024-09-17 19:44:32,461 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '3', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=3'}
+2024-09-17 19:44:32,461 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=3'}
+2024-09-17 19:44:32,472 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=716'}
+2024-09-17 19:44:32,472 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '33', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=33'}
+2024-09-17 19:44:32,472 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=33'}
+2024-09-17 19:44:32,521 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=780'}
+2024-09-17 19:44:32,521 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '780', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=780'}
+2024-09-17 19:44:32,521 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=780'}
+2024-09-17 19:44:32,525 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=774'}
+2024-09-17 19:44:32,525 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '774', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=774'}
+2024-09-17 19:44:32,525 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=774'}
+2024-09-17 19:44:32,529 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=789'}
+2024-09-17 19:44:32,529 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '789', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=789'}
+2024-09-17 19:44:32,529 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=789'}
+2024-09-17 19:44:32,550 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=798'}
+2024-09-17 19:44:32,551 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '798', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=798'}
+2024-09-17 19:44:32,551 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=798'}
+2024-09-17 19:44:32,560 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=800'}
+2024-09-17 19:44:32,561 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '800', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=800'}
+2024-09-17 19:44:32,561 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=800'}
+2024-09-17 19:44:32,562 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=806'}
+2024-09-17 19:44:32,562 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '806', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=806'}
+2024-09-17 19:44:32,562 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=806'}
+2024-09-17 19:44:32,563 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=845'}
+2024-09-17 19:44:32,563 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '845', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=845'}
+2024-09-17 19:44:32,563 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=845'}
+2024-09-17 19:44:32,589 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=3'}
+2024-09-17 19:44:32,589 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '3', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=3'}
+2024-09-17 19:44:32,589 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=3'}
+2024-09-17 19:44:32,599 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=33'}
+2024-09-17 19:44:32,599 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '33', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=33'}
+2024-09-17 19:44:32,599 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=33'}
+2024-09-17 19:44:32,613 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=469'}
+2024-09-17 19:44:32,613 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '469', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=469'}
+2024-09-17 19:44:32,613 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=469'}
+2024-09-17 19:44:32,666 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=780'}
+2024-09-17 19:44:32,666 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '40', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=40'}
+2024-09-17 19:44:32,666 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=40'}
+2024-09-17 19:44:32,667 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=789'}
+2024-09-17 19:44:32,668 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '71', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=71'}
+2024-09-17 19:44:32,668 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=71'}
+2024-09-17 19:44:32,672 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=774'}
+2024-09-17 19:44:32,672 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '162', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=162'}
+2024-09-17 19:44:32,672 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=162'}
+2024-09-17 19:44:32,690 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=798'}
+2024-09-17 19:44:32,690 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '246', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=246'}
+2024-09-17 19:44:32,690 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=246'}
+2024-09-17 19:44:32,707 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=806'}
+2024-09-17 19:44:32,707 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '268', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=268'}
+2024-09-17 19:44:32,707 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=268'}
+2024-09-17 19:44:32,710 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=800'}
+2024-09-17 19:44:32,710 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '282', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=282'}
+2024-09-17 19:44:32,710 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=282'}
+2024-09-17 19:44:32,717 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=845'}
+2024-09-17 19:44:32,718 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '451', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=451'}
+2024-09-17 19:44:32,718 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=451'}
+2024-09-17 19:44:32,738 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=33'}
+2024-09-17 19:44:32,738 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '513', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=513'}
+2024-09-17 19:44:32,738 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=513'}
+2024-09-17 19:44:32,756 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=469'}
+2024-09-17 19:44:32,757 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '561', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=561'}
+2024-09-17 19:44:32,757 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=561'}
+2024-09-17 19:44:32,769 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=3'}
+2024-09-17 19:44:32,769 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '77', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=77'}
+2024-09-17 19:44:32,769 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=77'}
+2024-09-17 19:44:32,800 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=40'}
+2024-09-17 19:44:32,800 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '40', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=40'}
+2024-09-17 19:44:32,800 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=40'}
+2024-09-17 19:44:32,805 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=71'}
+2024-09-17 19:44:32,805 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '71', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=71'}
+2024-09-17 19:44:32,805 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=71'}
+2024-09-17 19:44:32,805 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=162'}
+2024-09-17 19:44:32,805 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '162', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=162'}
+2024-09-17 19:44:32,805 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=162'}
+2024-09-17 19:44:32,806 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=246'}
+2024-09-17 19:44:32,806 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '246', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=246'}
+2024-09-17 19:44:32,806 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=246'}
+2024-09-17 19:44:32,836 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=451'}
+2024-09-17 19:44:32,836 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '451', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=451'}
+2024-09-17 19:44:32,836 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=451'}
+2024-09-17 19:44:32,843 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=268'}
+2024-09-17 19:44:32,843 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=282'}
+2024-09-17 19:44:32,843 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '268', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=268'}
+2024-09-17 19:44:32,843 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '282', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=282'}
+2024-09-17 19:44:32,843 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=268'}
+2024-09-17 19:44:32,843 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=282'}
+2024-09-17 19:44:32,874 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=561'}
+2024-09-17 19:44:32,874 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '561', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=561'}
+2024-09-17 19:44:32,874 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=561'}
+2024-09-17 19:44:32,875 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=513'}
+2024-09-17 19:44:32,875 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '513', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=513'}
+2024-09-17 19:44:32,875 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=513'}
+2024-09-17 19:44:32,906 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=77'}
+2024-09-17 19:44:32,906 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '77', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=77'}
+2024-09-17 19:44:32,906 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=77'}
+2024-09-17 19:44:32,949 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=162'}
+2024-09-17 19:44:32,949 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:32,949 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:32,968 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=40'}
+2024-09-17 19:44:32,968 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '549', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=549'}
+2024-09-17 19:44:32,968 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=549'}
+2024-09-17 19:44:32,978 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=451'}
+2024-09-17 19:44:32,978 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '830', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=830'}
+2024-09-17 19:44:32,978 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=830'}
+2024-09-17 19:44:32,981 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=71'}
+2024-09-17 19:44:32,981 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '7', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=7'}
+2024-09-17 19:44:32,981 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=7'}
+2024-09-17 19:44:32,983 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=246'}
+2024-09-17 19:44:32,983 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '40', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=40'}
+2024-09-17 19:44:32,984 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=40'}
+2024-09-17 19:44:32,984 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=282'}
+2024-09-17 19:44:32,985 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '74', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=74'}
+2024-09-17 19:44:32,985 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=74'}
+2024-09-17 19:44:32,996 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=268'}
+2024-09-17 19:44:32,997 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '77', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=77'}
+2024-09-17 19:44:32,997 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=77'}
+2024-09-17 19:44:33,012 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=513'}
+2024-09-17 19:44:33,012 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '80', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=80'}
+2024-09-17 19:44:33,012 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=80'}
+2024-09-17 19:44:33,026 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=561'}
+2024-09-17 19:44:33,026 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,026 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,083 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=77'}
+2024-09-17 19:44:33,083 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '139', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=139'}
+2024-09-17 19:44:33,083 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=139'}
+2024-09-17 19:44:33,084 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,084 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,084 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,088 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=549'}
+2024-09-17 19:44:33,088 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '549', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=549'}
+2024-09-17 19:44:33,088 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=549'}
+2024-09-17 19:44:33,111 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=74'}
+2024-09-17 19:44:33,112 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '74', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=74'}
+2024-09-17 19:44:33,112 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=74'}
+2024-09-17 19:44:33,114 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=7'}
+2024-09-17 19:44:33,114 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '7', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=7'}
+2024-09-17 19:44:33,114 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=7'}
+2024-09-17 19:44:33,115 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=77'}
+2024-09-17 19:44:33,115 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '77', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=77'}
+2024-09-17 19:44:33,115 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=77'}
+2024-09-17 19:44:33,120 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=40'}
+2024-09-17 19:44:33,120 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '40', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=40'}
+2024-09-17 19:44:33,120 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=40'}
+2024-09-17 19:44:33,122 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=830'}
+2024-09-17 19:44:33,122 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '830', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=830'}
+2024-09-17 19:44:33,122 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=830'}
+2024-09-17 19:44:33,164 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=80'}
+2024-09-17 19:44:33,165 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,165 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '80', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=80'}
+2024-09-17 19:44:33,165 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=80'}
+2024-09-17 19:44:33,165 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,165 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,225 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=139'}
+2024-09-17 19:44:33,226 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '139', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=139'}
+2024-09-17 19:44:33,226 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=139'}
+2024-09-17 19:44:33,242 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=549'}
+2024-09-17 19:44:33,243 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '199', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=199'}
+2024-09-17 19:44:33,243 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=199'}
+2024-09-17 19:44:33,257 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,257 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '266', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=266'}
+2024-09-17 19:44:33,257 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=266'}
+2024-09-17 19:44:33,279 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=830'}
+2024-09-17 19:44:33,280 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=7'}
+2024-09-17 19:44:33,280 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '281', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=281'}
+2024-09-17 19:44:33,280 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=281'}
+2024-09-17 19:44:33,280 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '392', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=392'}
+2024-09-17 19:44:33,280 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=392'}
+2024-09-17 19:44:33,291 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=40'}
+2024-09-17 19:44:33,291 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '606', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=606'}
+2024-09-17 19:44:33,291 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=606'}
+2024-09-17 19:44:33,293 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=77'}
+2024-09-17 19:44:33,293 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '611', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=611'}
+2024-09-17 19:44:33,294 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=611'}
+2024-09-17 19:44:33,343 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=80'}
+2024-09-17 19:44:33,343 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '614', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=614'}
+2024-09-17 19:44:33,343 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=614'}
+2024-09-17 19:44:33,376 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=199'}
+2024-09-17 19:44:33,376 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '199', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=199'}
+2024-09-17 19:44:33,376 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=199'}
+2024-09-17 19:44:33,387 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=139'}
+2024-09-17 19:44:33,387 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '804', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=804'}
+2024-09-17 19:44:33,387 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=804'}
+2024-09-17 19:44:33,397 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=266'}
+2024-09-17 19:44:33,397 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '266', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=266'}
+2024-09-17 19:44:33,397 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=266'}
+2024-09-17 19:44:33,415 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=392'}
+2024-09-17 19:44:33,415 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '392', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=392'}
+2024-09-17 19:44:33,415 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=392'}
+2024-09-17 19:44:33,416 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=606'}
+2024-09-17 19:44:33,416 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '606', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=606'}
+2024-09-17 19:44:33,416 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=606'}
+2024-09-17 19:44:33,421 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=611'}
+2024-09-17 19:44:33,421 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '611', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=611'}
+2024-09-17 19:44:33,421 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=611'}
+2024-09-17 19:44:33,422 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=281'}
+2024-09-17 19:44:33,422 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '281', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=281'}
+2024-09-17 19:44:33,422 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=281'}
+2024-09-17 19:44:33,465 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=614'}
+2024-09-17 19:44:33,465 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '614', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=614'}
+2024-09-17 19:44:33,465 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=614'}
+2024-09-17 19:44:33,518 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=199'}
+2024-09-17 19:44:33,518 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '828', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=828'}
+2024-09-17 19:44:33,518 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=828'}
+2024-09-17 19:44:33,522 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=804'}
+2024-09-17 19:44:33,522 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '804', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=804'}
+2024-09-17 19:44:33,522 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=804'}
+2024-09-17 19:44:33,536 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=266'}
+2024-09-17 19:44:33,537 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '829', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=829'}
+2024-09-17 19:44:33,537 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=829'}
+2024-09-17 19:44:33,568 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=281'}
+2024-09-17 19:44:33,569 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '831', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=831'}
+2024-09-17 19:44:33,569 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=392'}
+2024-09-17 19:44:33,570 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=831'}
+2024-09-17 19:44:33,570 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '832', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=832'}
+2024-09-17 19:44:33,571 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=832'}
+2024-09-17 19:44:33,582 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=606'}
+2024-09-17 19:44:33,582 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,582 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,610 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=611'}
+2024-09-17 19:44:33,610 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '180', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=180'}
+2024-09-17 19:44:33,610 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=180'}
+2024-09-17 19:44:33,648 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=614'}
+2024-09-17 19:44:33,648 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '833', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=833'}
+2024-09-17 19:44:33,648 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=833'}
+2024-09-17 19:44:33,664 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=829'}
+2024-09-17 19:44:33,664 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '829', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=829'}
+2024-09-17 19:44:33,664 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=829'}
+2024-09-17 19:44:33,670 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=828'}
+2024-09-17 19:44:33,670 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '828', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=828'}
+2024-09-17 19:44:33,670 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=828'}
+2024-09-17 19:44:33,675 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=804'}
+2024-09-17 19:44:33,675 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,675 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,688 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=74'}
+2024-09-17 19:44:33,688 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '283', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=283'}
+2024-09-17 19:44:33,688 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=283'}
+2024-09-17 19:44:33,719 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=831'}
+2024-09-17 19:44:33,719 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '831', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=831'}
+2024-09-17 19:44:33,719 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=831'}
+2024-09-17 19:44:33,735 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=832'}
+2024-09-17 19:44:33,735 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '832', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=832'}
+2024-09-17 19:44:33,735 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=832'}
+2024-09-17 19:44:33,762 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=180'}
+2024-09-17 19:44:33,763 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '180', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=180'}
+2024-09-17 19:44:33,763 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=180'}
+2024-09-17 19:44:33,771 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,772 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,772 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,798 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,798 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '769', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=769'}
+2024-09-17 19:44:33,798 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=769'}
+2024-09-17 19:44:33,801 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=833'}
+2024-09-17 19:44:33,801 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '833', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=833'}
+2024-09-17 19:44:33,801 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=833'}
+2024-09-17 19:44:33,826 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=829'}
+2024-09-17 19:44:33,826 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '827', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=827'}
+2024-09-17 19:44:33,826 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=827'}
+2024-09-17 19:44:33,842 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=828'}
+2024-09-17 19:44:33,842 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,842 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,853 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=283'}
+2024-09-17 19:44:33,853 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '283', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=283'}
+2024-09-17 19:44:33,853 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=283'}
+2024-09-17 19:44:33,855 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:33,855 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,855 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,911 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=831'}
+2024-09-17 19:44:33,912 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '283', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=283'}
+2024-09-17 19:44:33,912 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=283'}
+2024-09-17 19:44:33,914 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=832'}
+2024-09-17 19:44:33,915 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '317', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=317'}
+2024-09-17 19:44:33,915 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=317'}
+2024-09-17 19:44:33,951 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=180'}
+2024-09-17 19:44:33,951 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '521', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=521'}
+2024-09-17 19:44:33,951 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=521'}
+2024-09-17 19:44:33,958 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=769'}
+2024-09-17 19:44:33,958 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '769', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=769'}
+2024-09-17 19:44:33,958 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=769'}
+2024-09-17 19:44:33,975 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=833'}
+2024-09-17 19:44:33,975 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '566', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=566'}
+2024-09-17 19:44:33,975 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=566'}
+2024-09-17 19:44:33,983 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:33,983 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '686', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=686'}
+2024-09-17 19:44:33,984 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=686'}
+2024-09-17 19:44:34,025 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=81'}
+2024-09-17 19:44:34,025 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '81', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:34,025 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:34,052 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=283'}
+2024-09-17 19:44:34,053 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '699', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=699'}
+2024-09-17 19:44:34,053 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=699'}
+2024-09-17 19:44:34,056 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=283'}
+2024-09-17 19:44:34,056 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=317'}
+2024-09-17 19:44:34,056 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '283', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=283'}
+2024-09-17 19:44:34,056 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '317', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=317'}
+2024-09-17 19:44:34,056 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=283'}
+2024-09-17 19:44:34,056 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=317'}
+2024-09-17 19:44:34,158 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:34,159 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=521'}
+2024-09-17 19:44:34,159 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '785', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=785'}
+2024-09-17 19:44:34,160 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '521', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=521'}
+2024-09-17 19:44:34,160 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=785'}
+2024-09-17 19:44:34,160 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=521'}
+2024-09-17 19:44:34,196 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=566'}
+2024-09-17 19:44:34,197 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=686'}
+2024-09-17 19:44:34,197 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '566', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=566'}
+2024-09-17 19:44:34,198 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=566'}
+2024-09-17 19:44:34,198 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '686', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=686'}
+2024-09-17 19:44:34,198 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=686'}
+2024-09-17 19:44:34,227 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=769'}
+2024-09-17 19:44:34,227 - __main__ - INFO - {'action': 'UnionDataScraper.get_union_classifications_by_local_union_id', 'local_union_id': '834', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=834'}
+2024-09-17 19:44:34,227 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=834'}
+2024-09-17 19:44:34,262 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=81'}
+2024-09-17 19:44:34,276 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=283'}
+2024-09-17 19:44:34,277 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=699'}
+2024-09-17 19:44:34,278 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '699', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=699'}
+2024-09-17 19:44:34,278 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=699'}
+2024-09-17 19:44:34,327 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=785'}
+2024-09-17 19:44:34,327 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '785', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=785'}
+2024-09-17 19:44:34,327 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=785'}
+2024-09-17 19:44:34,334 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=317'}
+2024-09-17 19:44:34,334 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=521'}
+2024-09-17 19:44:34,370 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=686'}
+2024-09-17 19:44:34,395 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=566'}
+2024-09-17 19:44:34,411 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=834'}
+2024-09-17 19:44:34,412 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '834', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=834'}
+2024-09-17 19:44:34,412 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=834'}
+2024-09-17 19:44:34,429 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID=827'}
+2024-09-17 19:44:34,430 - __main__ - INFO - {'action': 'UnionDataScraper.get_counties_by_local_union_id', 'local_union_id': '827', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=827'}
+2024-09-17 19:44:34,430 - __main__ - INFO - {'action': 'UnionDataScraper._fetch_data', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=827'}
+2024-09-17 19:44:34,473 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=699'}
+2024-09-17 19:44:34,486 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=785'}
+2024-09-17 19:44:34,630 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=827'}
+2024-09-17 19:44:35,044 - __main__ - INFO - {'status': 'success', 'url': 'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu=834'}
+2024-09-17 19:44:35,045 - __main__ - INFO - {'status': 'success'}
+2024-09-17 19:44:35,045 - __main__ - INFO - {'action': 'UnionDataScraper.convert_unions_list_to_dataframe', 'local_unions_count': 87}
+2024-09-17 19:44:35,046 - __main__ - INFO - {'status': 'success', 'local_unions_shape': (87, 7), 'local_unions_fields': ['ID', 'LU', 'CharterCity', 'State', 'VP_District', 'Classifications', 'Counties']}
+2024-09-17 19:44:35,054 - __main__ - INFO - {'action': 'UnionDataScraper.merge_unionfacts_with_ibew_on_lu', 'merged_shape': (84, 12)}
+2024-09-17 19:44:35,054 - __main__ - INFO - {'action': 'UnionDataScraper._cleanup_data', 'initial_shape': (84, 12)}
+2024-09-17 19:44:35,054 - __main__ - INFO - {'action': 'UnionDataScraper._one_hot_encode_column'}
+2024-09-17 19:44:35,056 - __main__ - INFO - {'status': 'success', 'final_shape': (84, 60)}
+2024-09-17 19:44:35,067 - __main__ - INFO - {'action': 'UnionDataScraper.save_df_as_excel', 'output_filepath': 'merged_union_data.xlsx'}
+2024-09-17 19:44:35,359 - __main__ - INFO - {'action': 'UnionDataScraper.run', 'duration_seconds': 5.698917865753174}

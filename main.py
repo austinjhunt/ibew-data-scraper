@@ -449,8 +449,11 @@ if __name__ == "__main__":
         required=False,
         help="Comma-separated list of state abbreviations to query, e.g. NY,CT,RI",
     )
+
+    parser.add_argument("--logfile", required=False, help="Optional log file name")
     parser.add_argument("--output", required=False, help="Output file name (must end with .xlsx)")
     args = parser.parse_args()
+
 
     # Validate output file extension
     if args.output and not args.output.endswith(".xlsx"):
@@ -458,6 +461,15 @@ if __name__ == "__main__":
 
     # Initialize and run the scraper
     scraper = IBEWDataScraper(states=args.states)
+
+    if args.logfile:
+        # add a file handler to the logger
+        file_handler = logging.FileHandler(args.logfile)
+        file_handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
     if not args.output:
         args.output = "merged_union_data.xlsx"
     scraper.run(output_file=args.output)
