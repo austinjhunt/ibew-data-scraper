@@ -446,7 +446,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--states",
         type=parse_states,
-        required=True,
+        required=False,
         help="Comma-separated list of state abbreviations to query, e.g. NY,CT,RI",
     )
     parser.add_argument("--output", required=False, help="Output file name (must end with .xlsx)")
