@@ -4,6 +4,8 @@ import logging
 import re
 from bs4 import BeautifulSoup
 import time
+import sys
+import argparse
 from concurrent.futures import ThreadPoolExecutor, wait, ALL_COMPLETED
 
 logger = logging.getLogger(__name__)
@@ -13,16 +15,22 @@ REQUESTS_TIMEOUT = 10  # seconds
 
 
 class IBEWDataScraper:
-    def __init__(self):
-        self.states_to_query = ['NY', 'CT', 'RI', 'MA', 'VT', 'NH', 'ME']
-        self.unions_df = None
+    def __init__(self, states=None):
+        if states is None:
+            states = ["NY", "CT", "RI", "MA", "VT", "NH", "ME"]
+        self.states_to_query = states
 
-    def set_unions_df(self, df: pd.DataFrame):
-        """
-        Sets the unions DataFrame.
-        """
-        self.unions_df = df
-
+        logger.info(
+            {
+                "action": "UnionDataScraper.__init__",
+                "states_to_query": self.states_to_query,
+                "message": (
+                    f"Initialized IBEWDataScraper; "
+                    f"collecting IBEW data for states: "
+                    f"{', '.join(self.states_to_query)}"
+                ),
+            }
+        )
 
     def query_ibew_union_directory_by_state(self, state):
         """
@@ -43,21 +51,13 @@ class IBEWDataScraper:
             ]
         """
         url = f"https://ibew.org/ludSearch/DataIO.ashx?action=list-locals-by-state&state={state}&filter=all"
-        logger.info({
-            "action": "UnionDataScraper.query_by_state",
-            "state": state,
-            "url": url
-        })
+        logger.info({"action": "UnionDataScraper.query_by_state", "state": state, "url": url})
         try:
-            data = self._fetch_data(url, response_format='json')
+            data = self._fetch_data(url, response_format="json")
             return data
         except Exception as e:
-            logger.error({
-                "status": "exception",
-                "message": str(e)
-            })
+            logger.error({"status": "exception", "message": str(e)})
             return []
-
 
     def query_union_directory_by_multiple_states(self, states: list = []):
         """
@@ -69,17 +69,19 @@ class IBEWDataScraper:
         Returns:
             list: List of local unions.
         """
-        logger.info({
-            "action": "UnionDataScraper.query_union_directory_by_multiple_states",
-            "states": states
-        })
+        logger.info(
+            {
+                "action": "UnionDataScraper.query_union_directory_by_multiple_states",
+                "states": states,
+            }
+        )
         local_unions = []
         for state in states:
             local_unions += self.query_ibew_union_directory_by_state(state)
         supplemented = self._add_supplemental_data_to_unions_list(local_unions)
         return supplemented
 
-    def convert_unions_list_to_dataframe(self, local_unions: list  = []):
+    def convert_unions_list_to_dataframe(self, local_unions: list = []):
         """
         Converts a list of local unions to a pandas DataFrame.
 
@@ -89,16 +91,20 @@ class IBEWDataScraper:
         Returns:
             pd.DataFrame: DataFrame containing local unions.
         """
-        logger.info({
-            "action": "UnionDataScraper.convert_unions_list_to_dataframe",
-            "local_unions_count": len(local_unions)
-        })
+        logger.info(
+            {
+                "action": "UnionDataScraper.convert_unions_list_to_dataframe",
+                "local_unions_count": len(local_unions),
+            }
+        )
         self.local_unions = pd.DataFrame(local_unions)
-        logger.info({
-            "status": "success",
-            "local_unions_shape": self.local_unions.shape,
-            "local_unions_fields": self.local_unions.columns.tolist()
-        })
+        logger.info(
+            {
+                "status": "success",
+                "local_unions_shape": self.local_unions.shape,
+                "local_unions_fields": self.local_unions.columns.tolist(),
+            }
+        )
         return self.local_unions
 
     def _get_union_classifications_by_local_union_id(self, local_union_id: str):
@@ -119,76 +125,74 @@ class IBEWDataScraper:
         Returns:
             string: Comma-separated string of trade classes.
         """
-        url = f'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID={local_union_id}'
-        logger.info({
-            "action": "UnionDataScraper.get_union_classifications_by_local_union_id",
-            "local_union_id": local_union_id,
-            "url": url
-        })
+        url = f"https://ibew.org/ludSearch/DataIO.ashx?action=list-local-trade-classes&LocalUnionID={local_union_id}"
+        logger.info(
+            {
+                "action": "UnionDataScraper.get_union_classifications_by_local_union_id",
+                "local_union_id": local_union_id,
+                "url": url,
+            }
+        )
         try:
-            data = self._fetch_data(url, response_format='json')
-            return ','.join([el['TradeClass'] for el in data])
+            data = self._fetch_data(url, response_format="json")
+            return ",".join([el["TradeClass"] for el in data])
         except Exception as e:
-            logger.error({
-                "status": "exception",
-                "message": str(e)
-            })
+            logger.error({"status": "exception", "message": str(e)})
             return []
 
-    def _fetch_data(self, url, response_format='json'):
+    def _fetch_data(self, url, response_format="json"):
         """
         Fetch data from the given URL.
         """
-        logger.info({
-            "action": "UnionDataScraper._fetch_data",
-            "url": url
-        })
+        logger.info({"action": "UnionDataScraper._fetch_data", "url": url})
         response = requests.get(url, timeout=REQUESTS_TIMEOUT)
         if response.status_code == 200:
-            logger.info({
-                "status": "success",
-                "url": url,
-            })
-            if response_format == 'json':
+            logger.info(
+                {
+                    "status": "success",
+                    "url": url,
+                }
+            )
+            if response_format == "json":
                 return response.json()
-            elif response_format == 'html':
-                return BeautifulSoup(response.content, 'html.parser')
+            elif response_format == "html":
+                return BeautifulSoup(response.content, "html.parser")
         else:
-            logger.error({
-                "status": "failure",
-                "url": url,
-                "response": response.status_code
-            })
+            logger.error({"status": "failure", "url": url, "response": response.status_code})
             return []
 
     def _add_supplemental_data_to_unions_list(self, unions: list = []):
         """
         Adds classifications and counties to the unions list by querying the UnionFacts API for each local union ID using multithreading.
         """
+
         def add_data_to_union(union):
-            local_union_id = union.get('ID')
-            union['Classifications'] = self._get_union_classifications_by_local_union_id(local_union_id)
-            union['Counties'] = self._get_counties_by_local_union_id(local_union_id)
+            local_union_id = union.get("ID")
+            union["Classifications"] = self._get_union_classifications_by_local_union_id(
+                local_union_id
+            )
+            union["Counties"] = self._get_counties_by_local_union_id(local_union_id)
             return union
 
         try:
-            logger.info({
-                "action": "UnionDataScraper.add_classifications_to_unions_list",
-                "unions_count": len(unions)
-            })
+            logger.info(
+                {
+                    "action": "UnionDataScraper.add_classifications_to_unions_list",
+                    "unions_count": len(unions),
+                }
+            )
             with ThreadPoolExecutor(max_workers=10) as executor:
                 futures = [executor.submit(add_data_to_union, union) for union in unions]
                 results = [future.result() for future in futures]
 
-            logger.info({
-                "status": "success",
-            })
+            logger.info(
+                {
+                    "status": "success",
+                }
+            )
             return results
         except Exception as e:
-            logger.error({
-                "status": "exception",
-                "message": str(e)
-            })
+            logger.error({"status": "exception", "message": str(e)})
             return unions
 
     def _get_counties_by_local_union_id(self, local_union_id: str):
@@ -223,35 +227,21 @@ class IBEWDataScraper:
         Returns:
             list of county jurisdiction objects
         """
-        url = f'https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu={local_union_id}'
-        logger.info({
-            "action": "UnionDataScraper.get_counties_by_local_union_id",
-            "local_union_id": local_union_id,
-            "url": url
-        })
+        url = (
+            f"https://ibew.org/ludSearch/DataIO.ashx?action=list-local-counties&lu={local_union_id}"
+        )
+        logger.info(
+            {
+                "action": "UnionDataScraper.get_counties_by_local_union_id",
+                "local_union_id": local_union_id,
+                "url": url,
+            }
+        )
         try:
-            return self._fetch_data(url, response_format='json')
+            return self._fetch_data(url, response_format="json")
         except Exception as e:
-            logger.error({
-                "status": "exception",
-                "message": str(e)
-            })
+            logger.error({"status": "exception", "message": str(e)})
             return []
-
-    def display_unique_local_union_ids(self):
-        """
-        Displays unique local union IDs from the DataFrame.
-        """
-        if self.unions_df is not None:
-            unique_ids = self.unions_df['LU'].unique()
-            logger.info({
-                "action": "UnionDataScraper.display_unique_local_union_ids",
-                "unique_ids": unique_ids,
-                "unique_ids_count": len(unique_ids)
-            })
-            return unique_ids
-        else:
-            logger.warning("No union DataFrame available.")
 
     def get_ibew_locals_directory_from_union_facts_as_dataframe(self):
         """
@@ -265,14 +255,16 @@ class IBEWDataScraper:
 
         """
         url = "https://unionfacts.com/locals/International_Brotherhood_of_Electrical_Workers"
-        logger.info({
-            "action": "UnionDataScraper.get_ibew_locals_directory_from_union_facts_as_dataframe",
-            "url": url
-        })
-        fields = ['Union', 'Unit Name', 'Location', 'Members']
+        logger.info(
+            {
+                "action": "UnionDataScraper.get_ibew_locals_directory_from_union_facts_as_dataframe",
+                "url": url,
+            }
+        )
+        fields = ["Union", "Unit Name", "Location", "Members"]
         try:
-            html = self._fetch_data(url, response_format='html')
-            table = html.select('div.tab-content table')
+            html = self._fetch_data(url, response_format="html")
+            table = html.select("div.tab-content table")
             # get the first table
             if not table:
                 logger.warning("No table found in the HTML response.")
@@ -281,27 +273,28 @@ class IBEWDataScraper:
             table = table[0]  # Get the first table
             # Extract table data
             data = []
+
             def process_row(row):
-                cols = row.find_all('td')
+                cols = row.find_all("td")
                 union_name = cols[0].text.strip()
                 unit_name = cols[1].text.strip()
                 location = cols[2].text.strip()
-                members = int(cols[3].text.strip().replace(',', ''))
-                lu_id = re.search(r'Local (\d+)', union_name)
+                members = int(cols[3].text.strip().replace(",", ""))
+                lu_id = re.search(r"Local (\d+)", union_name)
                 if lu_id:
                     lu_id = lu_id.group(1)
-                    href_value = cols[0].find('a')['href']
+                    href_value = cols[0].find("a")["href"]
                     return {
-                        'Union': union_name,
-                        'Unit Name': unit_name,
-                        'Location': location,
-                        'Members': members,
-                        'LU': lu_id,
-                        'URL': href_value
+                        "Union": union_name,
+                        "Unit Name": unit_name,
+                        "Location": location,
+                        "Members": members,
+                        "LU": lu_id,
+                        "URL": href_value,
                     }
                 return None
 
-            rows = table.find('tbody').find_all('tr')
+            rows = table.find("tbody").find_all("tr")
             with ThreadPoolExecutor(max_workers=10) as executor:
                 futures = [executor.submit(process_row, row) for row in rows]
                 results = [future.result() for future in futures]
@@ -310,38 +303,38 @@ class IBEWDataScraper:
             return pd.DataFrame(data)
 
         except Exception as e:
-            logger.error({
-                "status": "exception",
-                "message": str(e)
-            })
+            logger.error({"status": "exception", "message": str(e)})
             return pd.DataFrame()
 
-    def merge_unionfacts_with_ibew_on_lu(self, unionfacts_directory_df: pd.DataFrame, ibew_df: pd.DataFrame):
+    def merge_unionfacts_with_ibew_on_lu(
+        self, unionfacts_directory_df: pd.DataFrame, ibew_df: pd.DataFrame
+    ):
         """
         Merges the UnionFacts DataFrame with the IBEW DataFrame on the LU column.
         """
-        merged_df = pd.merge(unionfacts_directory_df, ibew_df, on='LU', how='inner')
-        logger.info({
-            "action": "UnionDataScraper.merge_unionfacts_with_ibew_on_lu",
-            "merged_shape": merged_df.shape
-        })
+        merged_df = pd.merge(unionfacts_directory_df, ibew_df, on="LU", how="inner")
+        logger.info(
+            {
+                "action": "UnionDataScraper.merge_unionfacts_with_ibew_on_lu",
+                "merged_shape": merged_df.shape,
+            }
+        )
         return merged_df
 
     def save_df_as_excel(self, df, output_filepath: str = ""):
         """
         Saves the DataFrame as an Excel file.
         """
-        logger.info({
-            "action": "UnionDataScraper.save_df_as_excel",
-            "output_filepath": output_filepath,
-        })
+        logger.info(
+            {
+                "action": "UnionDataScraper.save_df_as_excel",
+                "output_filepath": output_filepath,
+            }
+        )
         try:
             df.to_excel(output_filepath, index=False)
         except Exception as e:
-            logger.error({
-                "status": "exception",
-                "message": str(e)
-            })
+            logger.error({"status": "exception", "message": str(e)})
 
     def _flatten_counties(self, unions_df: pd.DataFrame):
         """
@@ -356,16 +349,20 @@ class IBEWDataScraper:
             pd.DataFrame: The flattened DataFrame.
         """
         # Ensure that 'Counties' column is filled with lists
-        unions_df['Counties'] = unions_df['Counties'].apply(lambda x: x if isinstance(x, list) else [])
+        unions_df["Counties"] = unions_df["Counties"].apply(
+            lambda x: x if isinstance(x, list) else []
+        )
 
         # Explode the Counties list into multiple rows
-        counties_expanded = unions_df.explode('Counties').reset_index(drop=True)
+        counties_expanded = unions_df.explode("Counties").reset_index(drop=True)
 
         # Normalize the Counties JSON data into individual columns
-        counties_normalized = pd.json_normalize(counties_expanded['Counties']).add_prefix('County_')
+        counties_normalized = pd.json_normalize(counties_expanded["Counties"]).add_prefix("County_")
 
         # Merge the normalized counties back to the main DataFrame
-        result_df = pd.concat([counties_expanded.drop(columns=['Counties']), counties_normalized], axis=1)
+        result_df = pd.concat(
+            [counties_expanded.drop(columns=["Counties"]), counties_normalized], axis=1
+        )
 
         return result_df
 
@@ -380,9 +377,11 @@ class IBEWDataScraper:
         Returns:
             pd.DataFrame: The DataFrame with the one-hot encoded column.
         """
-        logger.info({
-            "action": "UnionDataScraper._one_hot_encode_column",
-        })
+        logger.info(
+            {
+                "action": "UnionDataScraper._one_hot_encode_column",
+            }
+        )
         one_hot = pd.get_dummies(df[column_name], prefix=column_name)
         # remove the original column
         df = df.drop(column_name, axis=1)
@@ -400,18 +399,11 @@ class IBEWDataScraper:
 
                 pd.DataFrame: The cleaned DataFrame.
         """
-        logger.info({
-            "action": "UnionDataScraper._cleanup_data",
-            "initial_shape": df.shape
-        })
-
+        logger.info({"action": "UnionDataScraper._cleanup_data", "initial_shape": df.shape})
 
         # One-hot encode the 'Classifications' column
-        df = self._one_hot_encode_column(df, 'Classifications')
-        logger.info({
-            "status": "success",
-            "final_shape": df.shape
-        })
+        df = self._one_hot_encode_column(df, "Classifications")
+        logger.info({"status": "success", "final_shape": df.shape})
 
         # flatten counties - we do not want JSON lists in a cell
         df = self._flatten_counties(df)
@@ -421,35 +413,51 @@ class IBEWDataScraper:
 
         return df
 
-    def run(self):
+    def run(self, output_file: str = "merged_union_data.xlsx"):
         """
         Main method to run the scraper.
         """
-        logger.info({
-            "action": "UnionDataScraper.run"
-        })
+        logger.info({"action": "UnionDataScraper.run"})
         start_time = time.time()
-        unionfacts_locals_directory_df = self.get_ibew_locals_directory_from_union_facts_as_dataframe()
+        unionfacts_locals_directory_df = (
+            self.get_ibew_locals_directory_from_union_facts_as_dataframe()
+        )
         local_unions = self.query_union_directory_by_multiple_states(self.states_to_query)
         df_local_unions = self.convert_unions_list_to_dataframe(local_unions)
-        self.set_unions_df(df_local_unions)
-        self.display_unique_local_union_ids()
-
-        data = self.merge_unionfacts_with_ibew_on_lu(unionfacts_locals_directory_df, df_local_unions)
-
+        data = self.merge_unionfacts_with_ibew_on_lu(
+            unionfacts_locals_directory_df, df_local_unions
+        )
         data = self._cleanup_data(data)
-
-        output_filepath = "merged_union_data.xlsx"
-
-        self.save_df_as_excel(data, output_filepath)
+        self.save_df_as_excel(data, output_file)
         end_time = time.time()
 
-        logger.info({
-            "action": "UnionDataScraper.run",
-            "duration_seconds": end_time - start_time
-        })
+        logger.info({"action": "UnionDataScraper.run", "duration_seconds": end_time - start_time})
+
+
+def parse_states(states_str):
+    """
+    Parse a comma-separated string of states.
+    """
+    return [state.strip() for state in states_str.split(",") if state.strip()]
+
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="IBEW Data Scraper")
+    parser.add_argument(
+        "--states",
+        type=parse_states,
+        required=True,
+        help="Comma-separated list of state abbreviations to query, e.g. NY,CT,RI",
+    )
+    parser.add_argument("--output", required=False, help="Output file name (must end with .xlsx)")
+    args = parser.parse_args()
 
-    scraper = IBEWDataScraper()
-    scraper.run()
+    # Validate output file extension
+    if args.output and not args.output.endswith(".xlsx"):
+        sys.exit("Error: The output file must have a .xlsx extension.")
+
+    # Initialize and run the scraper
+    scraper = IBEWDataScraper(states=args.states)
+    if not args.output:
+        args.output = "merged_union_data.xlsx"
+    scraper.run(output_file=args.output)
