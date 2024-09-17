@@ -45,7 +45,7 @@ pip install -r requirements.txt
 
 ### Script Arguments
 
-The script can be passed two optional arguments: `states` and `output`. See the help output below for a description of these arguments.
+The script can be passed 3 optional arguments: `states`, `logfile`, and `output`. See the help output below for a description of these arguments.
 
 ```bash
 (venv) austinhunt@Austins-MBP-2 unionfacts % python main.py -h
