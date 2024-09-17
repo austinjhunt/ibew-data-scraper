@@ -45,22 +45,36 @@ pip install -r requirements.txt
 
 ### Script Arguments
 
-```bash
+The script can be passed two optional arguments: `states` and `output`. See the help output below for a description of these arguments.
 
+```bash
 (venv) austinhunt@Austins-MBP-2 unionfacts % python main.py -h
-usage: main.py [-h] --states STATES [--output OUTPUT]
+usage: main.py [-h] [--states STATES] [--logfile LOGFILE] [--output OUTPUT]
 
 IBEW Data Scraper
 
 options:
-  -h, --help       show this help message and exit
-  --states STATES  Comma-separated list of state abbreviations to query, e.g. NY,CT,RI
-  --output OUTPUT  Output file name (must end with .xlsx)
+  -h, --help         show this help message and exit
+  --states STATES    Comma-separated list of state abbreviations to query, e.g. NY,CT,RI
+  --logfile LOGFILE  Optional log file name
+  --output OUTPUT    Output file name (must end with .xlsx)
 ```
 
-### Example:
+### Example with arguments:
 
 ```bash
-(venv) austinhunt@Austins-MBP-2 unionfacts % python main.py --states=NY,CT,RI,MA,VT,NH,ME --output merged_union_data.xlsx
+(venv) austinhunt@Austins-MBP-2 unionfacts % python main.py --states=NY,CT,RI,MA,VT,NH,ME --output merged_union_data.xlsx --logfile main.log
 
 ```
+
+### Example without arguments:
+
+```bash
+(venv) austinhunt@Austins-MBP-2 unionfacts % python main.py
+```
+
+If you run without arguments, the data will be written to `merged_union_data.xlsx` ([see sample file here](./merged_union_data.xlsx)), and it will collect data for the following default states: `["NY", "CT", "RI", "MA", "VT", "NH", "ME"]`
+
+### Logging
+
+You can optionally pass `--logfile <log file path>` to output logs to a file in addition to standard output. A [sample log file](./main.log) is included in the repo.
