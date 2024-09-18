@@ -11,7 +11,7 @@ from concurrent.futures import ThreadPoolExecutor, wait, ALL_COMPLETED
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
-REQUESTS_TIMEOUT = 10  # seconds
+REQUESTS_TIMEOUT = 3  # seconds
 
 
 class IBEWDataScraper:
@@ -145,7 +145,20 @@ class IBEWDataScraper:
         Fetch data from the given URL.
         """
         logger.info({"action": "UnionDataScraper._fetch_data", "url": url})
-        response = requests.get(url, timeout=REQUESTS_TIMEOUT, verify=False)
+        ssl_error = False
+        try:
+            response = requests.get(url, timeout=REQUESTS_TIMEOUT)
+        except requests.exceptions.SSLError as e:
+            logger.error({"status": "exception", "message": str(e)})
+            ssl_error = True
+        if ssl_error:
+            try:
+                logger.info({"status": "retrying with verify=False"})
+                response = requests.get(url, timeout=REQUESTS_TIMEOUT, verify=False)
+            except Exception as e:
+                logger.error({"status": "exception", "message": str(e)})
+                return []
+
         if response.status_code == 200:
             logger.info(
                 {
@@ -389,6 +402,9 @@ class IBEWDataScraper:
                 "action": "UnionDataScraper._one_hot_encode_column",
             }
         )
+        if column_name not in df.columns:
+            logger.error(f"Column '{column_name}' not found in DataFrame.")
+            return df
         one_hot = pd.get_dummies(df[column_name], prefix=column_name)
         # remove the original column
         df = df.drop(column_name, axis=1)
