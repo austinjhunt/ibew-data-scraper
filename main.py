@@ -145,7 +145,7 @@ class IBEWDataScraper:
         Fetch data from the given URL.
         """
         logger.info({"action": "UnionDataScraper._fetch_data", "url": url})
-        response = requests.get(url, timeout=REQUESTS_TIMEOUT)
+        response = requests.get(url, timeout=REQUESTS_TIMEOUT, verify=False)
         if response.status_code == 200:
             logger.info(
                 {
