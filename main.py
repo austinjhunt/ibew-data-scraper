@@ -312,6 +312,13 @@ class IBEWDataScraper:
         """
         Merges the UnionFacts DataFrame with the IBEW DataFrame on the LU column.
         """
+        # avoid key errors
+        if "LU" not in unionfacts_directory_df.columns:
+            logger.error("LU column not found in unionfacts_directory_df")
+            return pd.DataFrame()
+        if "LU" not in ibew_df.columns:
+            logger.error("LU column not found in ibew_df")
+            return pd.DataFrame()
         merged_df = pd.merge(unionfacts_directory_df, ibew_df, on="LU", how="inner")
         logger.info(
             {
