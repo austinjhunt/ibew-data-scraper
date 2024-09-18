@@ -1,6 +1,6 @@
 # Upwork Job - Build simple Python script to query specific website’s API directly, with Excel output
 
-## Client: Michael Winchell
+## Client: *******
 
 ## Start Date: September 17, 2024
 
